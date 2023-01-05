@@ -554,49 +554,49 @@ function cvssStrToObject(cvss) {
             var elt = temp[i].split(':');
             switch(elt[0]) {
                 case "AV":
-                    if (elt[1] === "N") res.AV = "Network"
-                    else if (elt[1] === "A") res.AV = "Adjacent Network"
-                    else if (elt[1] === "L") res.AV = "Local"
-                    else if (elt[1] === "P") res.AV = "Physical"
+                    if (elt[1] === "N") res.AV = "AV:N"
+                    else if (elt[1] === "A") res.AV = "AV:A"
+                    else if (elt[1] === "L") res.AV = "AV:L"
+                    else if (elt[1] === "P") res.AV = "AV:P"
                     res.AV = $t(res.AV)
                     break;
                 case "AC":
-                    if (elt[1] === "L") res.AC = "Low"
-                    else if (elt[1] === "H") res.AC = "High"
+                    if (elt[1] === "L") res.AC = "AC:L"
+                    else if (elt[1] === "H") res.AC = "AC:H"
                     res.AC = $t(res.AC)
                     break;
                 case "PR":
-                    if (elt[1] === "N") res.PR = "None"
-                    else if (elt[1] === "L") res.PR = "Low"
-                    else if (elt[1] === "H") res.PR = "High"
+                    if (elt[1] === "N") res.PR = "PR:N"
+                    else if (elt[1] === "L") res.PR = "PR:L"
+                    else if (elt[1] === "H") res.PR = "PR:H"
                     res.PR = $t(res.PR)
                     break;
                 case "UI":
-                    if (elt[1] === "N") res.UI = "None"
-                    else if (elt[1] === "R") res.UI = "Required"
+                    if (elt[1] === "N") res.UI = "UI:N"
+                    else if (elt[1] === "R") res.UI = "UI:R"
                     res.UI = $t(res.UI)
                     break;
                 case "S":
-                    if (elt[1] === "U") res.S = "Unchanged"
-                    else if (elt[1] === "C") res.S = "Changed"
+                    if (elt[1] === "U") res.S = "S:U"
+                    else if (elt[1] === "C") res.S = "S:C"
                     res.S = $t(res.S)
                     break;
                 case "C":
-                    if (elt[1] === "N") res.C = "None"
-                    else if (elt[1] === "L") res.C = "Low"
-                    else if (elt[1] === "H") res.C = "High"
+                    if (elt[1] === "N") res.C = "C:N"
+                    else if (elt[1] === "L") res.C = "C:L"
+                    else if (elt[1] === "H") res.C = "C:H"
                     res.C = $t(res.C)
                     break;
                 case "I":
-                    if (elt[1] === "N") res.I = "None"
-                    else if (elt[1] === "L") res.I = "Low"
-                    else if (elt[1] === "H") res.I = "High"
+                    if (elt[1] === "N") res.I = "I:N"
+                    else if (elt[1] === "L") res.I = "I:L"
+                    else if (elt[1] === "H") res.I = "I:H"
                     res.I = $t(res.I)
                     break;
                 case "A":
-                    if (elt[1] === "N") res.A = "None"
-                    else if (elt[1] === "L") res.A = "Low"
-                    else if (elt[1] === "H") res.A = "High"
+                    if (elt[1] === "N") res.A = "A:N"
+                    else if (elt[1] === "L") res.A = "A:L"
+                    else if (elt[1] === "H") res.A = "A:H"
                     res.A = $t(res.A)
                     break;
                 case "E":
