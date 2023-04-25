@@ -978,3 +978,27 @@ function replaceSubTemplating(o, originalData = o){
         })
     }
 }
+
+// Ben 24 Apr 2024
+// Add 1 month to the end date of the report
+expressions.filters.addOneMonth = function(input) {
+	var date = new Date(input);
+	var newDate = new Date(date.setMonth(date.getMonth()+1));
+	return newDate;
+}
+
+// Ben 24 Apr 2024
+// Add 2 months to the end date of the report
+expressions.filters.addOneMonth = function(input) {
+	var date = new Date(input);
+	var newDate = new Date(date.setMonth(date.getMonth()+2));
+	return newDate;
+}
+
+// Ben 24 Apr 2024
+// Add 3 months to the end date of the report
+expressions.filters.addOneMonth = function(input) {
+	var date = new Date(input);
+	var newDate = new Date(date.setMonth(date.getMonth()+3));
+	return newDate;
+}
